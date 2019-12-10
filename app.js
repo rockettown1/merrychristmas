@@ -106,7 +106,6 @@ let scene = new ScrollMagic.Scene({
   triggerHook: 0
 })
   .setTween(tween)
-  .addIndicators()
   .setPin(imagesequence)
   .addTo(controller);
 
@@ -119,7 +118,6 @@ let scene2 = new ScrollMagic.Scene({
   triggerHook: 0
 })
   .setTween(textAnim)
-  .addIndicators()
   .addTo(controller);
 
 let scene3 = new ScrollMagic.Scene({
@@ -128,5 +126,4 @@ let scene3 = new ScrollMagic.Scene({
   triggerHook: 0
 })
   .setTween(textAnim2)
-  .addIndicators()
   .addTo(controller);
