@@ -84,6 +84,7 @@ preloadImages(images);
 
 const main = document.getElementById("imagesequence");
 const text = main.querySelector("h1");
+const scrll = main.querySelector("h3");
 
 let obj = { curImg: 0 };
 
@@ -109,12 +110,23 @@ let scene = new ScrollMagic.Scene({
   .setPin(imagesequence)
   .addTo(controller);
 
-const textAnim = TweenMax.fromTo(text, 5, { opacity: 1 }, { opacity: 0 });
+const textAnim = TweenMax.fromTo(text, 5, { opacity: 0 }, { opacity: 1 });
+const textAnim2 = TweenMax.fromTo(scrll, 5, { opacity: 1 }, { opacity: 0 });
 
 let scene2 = new ScrollMagic.Scene({
-  duration: 1000,
+  duration: 100,
   triggerElement: imagesequence,
   triggerHook: 0
 })
   .setTween(textAnim)
+  .addIndicators()
+  .addTo(controller);
+
+let scene3 = new ScrollMagic.Scene({
+  duration: 100,
+  triggerElement: imagesequence,
+  triggerHook: 0
+})
+  .setTween(textAnim2)
+  .addIndicators()
   .addTo(controller);
