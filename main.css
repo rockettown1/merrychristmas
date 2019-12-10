@@ -38,10 +38,11 @@ body {
 section {
   height: 100vh;
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section h1 {
-  padding-top: 300px;
-  text-align: center;
   font-size: 80px;
 }
