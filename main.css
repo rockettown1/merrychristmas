@@ -12,7 +12,7 @@ body {
 #loader {
   height: 100vh;
   width: 100vw;
-  background-image: url("./pics/forLoader.jpg");
+
   background-size: cover;
   position: absolute;
   display: flex;
@@ -20,6 +20,18 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 10;
+  object-fit: cover;
+}
+
+.img-load {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.spinner {
+  position: absolute;
 }
 
 #loader p {
