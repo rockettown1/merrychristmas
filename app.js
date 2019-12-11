@@ -60,6 +60,7 @@ let images = [
   "./pics/scene00059.jpg"
 ];
 
+const loader = document.getElementById("loader");
 function preloadImages(array) {
   if (!preloadImages.list) {
     preloadImages.list = [];
@@ -78,6 +79,11 @@ function preloadImages(array) {
     list.push(img);
     img.src = array[i];
   }
+  setTimeout(() => {
+    loader.classList.add("animated");
+    loader.classList.add("fadeOut");
+    console.log("loaded");
+  }, 3000);
 }
 
 preloadImages(images);
