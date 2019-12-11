@@ -60,6 +60,7 @@ let images = [
   "./pics/scene00059.jpg"
 ];
 
+const body = document.querySelector("body");
 const loader = document.getElementById("loader");
 function preloadImages(array) {
   if (!preloadImages.list) {
@@ -80,6 +81,7 @@ function preloadImages(array) {
     img.src = array[i];
   }
   setTimeout(() => {
+    body.style.overflow = "scroll";
     loader.classList.add("animated");
     loader.classList.add("fadeOut");
     console.log("loaded");
